@@ -13,7 +13,7 @@ class Flight <ApplicationRecord
     binding.pry
     passengers.where("age >= 18")
     Flight.joins(:passengers).group(:id).where('age >= 18')
-    # Flight.where("number = :number", number: params[:flight_number])
+    
   end
 
   def minors
